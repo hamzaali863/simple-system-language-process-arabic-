@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''QA system.ipynb'''
 
-
+# install farasa tools
 pip install farasapy
 
 
@@ -13,7 +13,7 @@ from nltk.tokenize import word_tokenize
 from nltk.tag import StanfordNERTagger
 from nltk.corpus import words
 from nltk.corpus import stopwords
-
+#use it one time with internet 
 nltk.download('punkt')
 nltk.download('words')
 nltk.download('stopwords')
@@ -24,7 +24,7 @@ from farasa.ner import FarasaNamedEntityRecognizer
 from farasa.diacratizer import FarasaDiacritizer
 from farasa.segmenter import FarasaSegmenter
 from farasa.stemmer import FarasaStemmer
-
+#send request to google and get answer 
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -42,7 +42,7 @@ def googleSearch(query):
     lines = [span.get_text() for span in spans]
 
     return lines
-
+# how many 
 def how_many():
     ss=" ".join(results)
     print("\n word tokenize: ", word_tokenize(ss))
@@ -133,7 +133,7 @@ def who_qu():
         se +=z +" "
 
     print(se +keymax)
-
+#where 
 def where():
     s=" ".join(results)
    
